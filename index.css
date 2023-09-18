@@ -6,12 +6,9 @@
 
 }
 
-/*Bootstrap Font*/
-body {
-	font-family: 'Orbitron',"Helvetica Neue", sans-serif;
-}
 
 body {
+	font-family: 'Orbitron',"Helvetica Neue", sans-serif;
 	background-image: url(https://img.freepik.com/free-photo/3d-render-modern-technology-background-with-connecting-lines-dots_1048-5766.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -21,6 +18,9 @@ body {
   background-color: #00636360 !important;
 }
 
+.navbar {
+	background: black !important;
+}
 
 nav a:hover, li > a:hover { 
 	color: yellow !important;
@@ -32,10 +32,18 @@ nav a:hover, li > a:hover {
 	font-size: .9rem !important;
 }
 
+a {
+scroll-behavior: smooth !important;
+}
 
 li > a {
 	color: white !important;
 	font-style: italic !important;
+	text-decoration: none !important;
+}
+
+#projectbutton {
+	color: white !important;
 	text-decoration: none !important;
 }
 
@@ -45,12 +53,27 @@ border-bottom-color: darkgrey;
 border-style: solid;
 border-width: thick;
 /*border-left: none;*/
-border-top: none;
+border-bottom: none;
 border-radius: 10%;
 
 }
 
 
-#profile-text {
+#profile-text, #projects, #toolbox, #contactbox {
 	background-color: #000000C6 !important;
+}
+
+.projcard {
+	height: 100%;
+}
+
+.btn-style {
+	color: white;
+	background-color: darkblue;
+	border-radius: 25%;
+	font-size: .8rem;
+}
+
+.navbar-toggler-icon {
+
 }

@@ -22,35 +22,36 @@
 		<!-- Start of Main Container -->
 
 		<main>
-			<!-- Start of Navbar Section -->
-			<section>	
-				<nav class="navbar navbar-expand-lg navbar-dark bg-nav">
-					<a class="navbar-brand" href="#">About Me</a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse" id="navbarNav">
-						<ul class="navbar-nav ml-auto">
-							<li class="nav-item">
-								<a class="nav-link" href="#">Projects</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Tools</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">Contacts</a>
-							</li>
-						</ul>
-					</div>
-				</nav>
-			</section>
-			<!-- End of Navbar Section -->
+			<!-- Start of Top Navbar -->
+
+			<nav id="navmenu" class="navbar navbar-expand-lg bg-nav fixed-top">
+				<a class="navbar-brand" href="#landing">About Me</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="#projects">Projects</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#tools">Tools</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#contact">Contacts</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+
+			<!-- End of Top Navbar -->
 
 			
 			<section>
-				<div class="container-fluid text-center">
-					<div class="row">
+				<div class="container-fluid text-center pt-5">
+					<div class="row mt-5">
 						<!-- Start of Left Navigation Panel -->
+
 						<div class="col-md-2 d-none d-md-block p-0">
 							<div class="accordion" id="sideAccordion">
 
@@ -64,10 +65,10 @@
 									<div id="collapseOffer" class="collapse" aria-labelledby="headingTwo" data-parent="#sideAccordion">
 										<div class="card-body">
 											<ul class="text-justify sideAccordionSubItem text-left">
-												<li class="border-top py-2 ml-3"><a href="#">Frontend Design</a></li>
-												<li class="border-top py-2 ml-3"><a href="#">Backend Application Development</a></li>
-												<li class="border-top py-2 ml-3"><a href="#">Full Stack Web App Development</a></li>
-												<li class="border-top py-2 ml-3"><a href="#">Software Project Management</a></li>
+												<li class="border-top py-2 ml-3" data-toggle="modal" data-target="#modalfrontend"><a href="#">Frontend Design</a></li>
+												<li class="border-top py-2 ml-3" data-toggle="modal" data-target="#modalbackend"><a href="#">Backend Application Development</a></li>
+												<li class="border-top py-2 ml-3" data-toggle="modal" data-target="#modalfullstack"><a href="#">Full Stack Web App Development</a></li>
+												<li class="border-top py-2 ml-3" data-toggle="modal" data-target="#modalproject"><a href="#">Software Project Management</a></li>
 											</ul>
 										</div>
 									</div>
@@ -78,22 +79,13 @@
 								<!-- Projects Dropdown -->
 								<div>
 									<h2 class="mb-0">
-										<button class="btn btn-link btn-block text-left collapsed sideAccordionItem" type="button" data-toggle="collapse" data-target="#collapseProject" aria-expanded="false" aria-controls="collapseProject">
-											Projects
+										<button class="btn btn-link btn-block text-left" type="button" data-target="#projects" aria-expanded="false">
+											<a id="projectbutton" href="#projects">Projects</a>
 										</button>
 									</h2>
-									<div id="collapseProject" class="collapse" aria-labelledby="headingTwo" data-parent="#sideAccordion">
-										<div class="card-body">
-											<ul class="text-justify sideAccordionSubItem text-left" style="list-style: none;">
-												<li class="border-top py-2 ml-3"><a href="#">Project 1</a></li>
-												<li class="border-top py-2 ml-3"><a href="#">Project 2</a></li>
-												<li class="border-top py-2 ml-3"><a href="#">Project 3</a></li>
-											</ul>
-										</div>
-									</div>
 
 								</div>
-								<!-- End of Projects Dropdown -->
+								<!-- End of Projects Dropdown -->	
 
 								<!-- Tools Dropdown -->
 								<div>
@@ -105,9 +97,11 @@
 									<div id="collapseTools" class="collapse" aria-labelledby="headingTwo" data-parent="#sideAccordion">
 										<div class="card-body">
 											<ul class="text-justify sideAccordionSubItem text-left" style="list-style: none;">
-												<li class="border-top py-2 ml-3"><a href="#">HTML</a></li>
-												<li class="border-top py-2 ml-3"><a href="#">Bootstrap</a></li>
-												<li class="border-top py-2 ml-3"><a href="#">Node JS Server</a></li>
+												<li class="border-top py-2 ml-3" data-toggle="modal" data-target="#modalHTML"><a href="#">HTML</a></li>
+
+												<li class="border-top py-2 ml-3" data-toggle="modal" data-target="#modalBootstrap"><a href="#">Bootstrap</a></li>
+												<li class="border-top py-2 ml-3" data-toggle="modal" data-target="#modalNode"><a href="#">Node JS Server</a></li>
+												<li class="border-top py-2 ml-3"><a href="#tools">All tools</a></li>
 											</ul>
 										</div>
 									</div>
@@ -124,9 +118,11 @@
 									<div id="collapseContact" class="collapse" aria-labelledby="headingTwo" data-parent="#sideAccordion">
 										<div class="card-body">
 											<ul class="text-justify sideAccordionSubItem text-left" style="list-style: none;">
-												<li class="border-top py-2 ml-3"><a href="#">Facebook</a></li>
-												<li class="border-top py-2 ml-3"><a href="#">LinkedIn</a></li>
-												<li class="border-top py-2 ml-3"><a href="#">Message</a></li>
+												<li class="border-top py-2 ml-3"><a href="https://www.facebook.com/">Facebook</a></li>
+												<li class="border-top py-2 ml-3"><a href="https://www.viber.com/">Viber</a></li>
+												<li class="border-top py-2 ml-3"><a href="https://www.gmail.com/">Gmail</a></li>
+												<li class="border-top py-2 ml-3"><a href="https://www.whatsapp.com">Whatsapp</a></li>
+												<li class="border-top py-2 ml-3"><a href="#contact">Direct Message</a></li>
 											</ul>
 										</div>
 									</div>
@@ -138,21 +134,23 @@
 						<!-- End of Left Navigation Panel -->
 
 
-						<div class="col-md-10 p-0">
+						<div id="landing" class="col-md-10 p-0 pt-5">
+						
 							<!-- Start of Landing Section -->
-							<div id="myDP" class="container-fluid min-vh-100 p-3 p-md-5 text-white">
-								<img class="w-50 h-50 border-property-dp" src="https://www.digitec.ch/im/Files/1/9/9/9/3/3/1/3/the_matrix_teaser_2_format21.jpeg">
-								<div id="profile-text">
-									<h3 class="mt-1 text-warning">RICHARD FREDERICK AQUINO</h3>
+							<div  class="container-fluid p-3 p-md-5 text-white">
+								<img class="w-50 h-50 border-property-dp mb-2" src="https://www.digitec.ch/im/Files/1/9/9/9/3/3/1/3/the_matrix_teaser_2_format21.jpeg">
+								<div id="profile-text" class="pt-1">
+									<h3 class="mt-2 text-warning">RICHARD FREDERICK AQUINO</h3>
 									<h5>Full Stack Web Developer</h5>
 									<p class="pt-4 px-5 text-left">
-										A full-stack developer is a developer or engineer who can build both the front end and the back end of a website. The front end (the parts of a website a user sees and interacts with) and the back end (the behind-the-scenes data storage and processing) require different skill sets. Since full-stack developers are involved with all aspects of the development process, they must have expertise in both.
+										Currently undergoing the Full-stack Web Developer bootcamp at Zuitt, I am well on my way to becoming an expert web technology builder who can build both the front end and the back end of a website. The front end (the parts of a website a user sees and interacts with) and the back end (the behind-the-scenes data storage and processing) require different skill sets. Since full-stack developers are involved with all aspects of the development process, they must have expertise in both.
 									</p>
 									<p class="px-5 pb-5 text-left">
-										A full-stack developer can work in-house or at a computer development company that engineers websites, software, and other components for other businesses.
+										I am able to deliver my full-stack development services through either in-house employment or as a contract consultant via a computer development company that engineers websites, software, and other components for other businesses.
 									</p>
 								</div>
 							</div>
+						
 							<!-- End of Landing Section -->
 
 							<!-- Start of Project Section -->
@@ -161,59 +159,334 @@
 							<!-- End of Project Section -->
 						</div>
 					</div>   <!-- end of row  -->
-					<div class="row d-flex justify-content-around">
-						<div class="col-md-2 d-none d-md-block p-0 mr-5">
+					<div id="projects" class="container-fluid p-3 pt-5 ">
+						<div class="row mt-5">
+							<div class="col-md-2 d-none d-md-block p-0">
+							</div>
+							<div class="col-md-10 py-3 ">
+								<h3 class="text-warning">MY PROJECTS</h3>
+								<div class="container-fluid justify-content-center">
+									<div class="row mt-3">
+										<div class="col-lg-3 mt-3">
+										    <div class="bg-light p-3 border-property-dp mb-md-0 projcard">
+										    	<img class="img-fluid p-0" src="./images/frontend.jpg">
+										        <h5 class="fw-bold">Front-end Dev Projects</h5>
+										        <p class="text-grey text-left">
+										        	My Front-end Development projects implement user-interface (UI) designs that combine aesthetics with intuitive element placements which enables my clients' websites to be both functional and fun to use.
+										        </p>
+										        <div class="text-left">
+										        	<button class="btn-style p-2">Have a look</button>
+										        </div>
+
+										    </div>
+										</div>
+
+										<div class="col-lg-3 mt-3">
+										    <div class="bg-light p-3 border-property-dp mb-md-0 projcard">
+										    	<img class="img-fluid p-0" src="./images/backend.jpg">
+										        <h5>Back-end Dev Projects</h5>
+										        <p class="text-grey text-left">
+										        	I developed several web applications that utilized backend databases like MySQL and MongoDB for high-capacity yet efficient data storage and access. Through my services, my clients gained the ability to efficiently capture important customer information from every webpage visit, and to query information for analysis - thus giving them a crucial competitive edge.
+										        </p>
+										        <div class="text-left">
+										        	<button class="btn-style p-2">Have a look</button>
+										        </div>
+										    </div>
+										</div>
+
+										<div class="col-lg-3 mt-3">
+										    <div class="bg-light p-3 border-property-dp mb-md-0 projcard">
+										    	<img class="img-fluid p-0" src="./images/fullstack.jpg">
+										        <h5>Full-stack Dev Projects</h5>
+										        <p class="text-grey text-left">
+										        	I mainly use MERN technology stack to build an end-to-end web application for my clients. The resulting web application is one that is seamless between its frontend and backend components thus ensuring that my clients' businesses are empowered all the while ensuring a delightful user experience.
+										        </p>
+										        <div class="text-left">
+										        	<button class="btn-style p-2">Have a look</button>
+										        </div>
+										    </div>
+										</div>
+										<div class="col-lg-3 mt-3">
+										    <div class="bg-light p-3 border-property-dp mb-md-0 projcard">
+										    	<img class="img-fluid p-0" src="./images/projectmgt.jpg">
+										        <h5>Project Management</h5>
+										        <p class="text-grey text-left">
+										        	A quality web application delivery goes beyond coding and deployment. Factors like schedule, budget and quality - among others, are just as critical to the successful delivery of the web application. In all the projects I manage, I make sure that the application does not only deliver the functionalities required by the users, but also gets completed within target schedule and budget. 
+										        </p>
+										        <div class="text-left">
+										        	<button class="btn-style p-2">Have a look</button>
+										        </div>
+										    </div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
 						</div>
-
-							<div class="card bg-dark col-10 col-md-3 mb-5 mb-xl-2" style="width: 18rem;">
-								<div class="card-body">
-									<img src="https://clever-solution.com/wp-content/uploads/2020/04/5625%D0%9C%D0%BE%D0%BD%D1%82%D0%B0%D0%B6%D0%BD%D0%B0%D1%8F-%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C-1-1280x720.png" class="card-img-top" />
-									<h5 class="card-title mt-3">Node JS Server</h5>
-									<h6 class="card-subtitle mb-2 text-muted">Backend Basics</h6>
-									<p class="card-text text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-									<a href="#" class="card-link">Link to Project</a>
-								</div>
-							</div>
-
-							<div class="card bg-dark col-10 col-md-3 mb-5 mb-xl-0" style="width: 18rem;">
-								<div class="card-body">
-									<img src="https://clever-solution.com/wp-content/uploads/2020/04/5625%D0%9C%D0%BE%D0%BD%D1%82%D0%B0%D0%B6%D0%BD%D0%B0%D1%8F-%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C-1-1280x720.png" class="card-img-top" />
-									<h5 class="card-title mt-3">Node JS Server</h5>
-									<h6 class="card-subtitle mb-2 text-muted">Backend Basics</h6>
-									<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-									<a href="#" class="card-link">Link to Project</a>
-								</div>
-							</div>
-							<div class="card bg-dark col-10 col-md-3 mb-5 mb-xl-0" style="width: 18rem;">
-								<div class="card-body">
-									<img src="https://clever-solution.com/wp-content/uploads/2020/04/5625%D0%9C%D0%BE%D0%BD%D1%82%D0%B0%D0%B6%D0%BD%D0%B0%D1%8F-%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C-1-1280x720.png" class="card-img-top" />
-									<h5 class="card-title mt-3">Node JS Server</h5>
-									<h6 class="card-subtitle mb-2 text-muted">Backend Basics</h6>
-									<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-									<a href="#" class="card-link">Link to Project</a>
-								</div>
-							</div>
-					
-
 					</div>
+
+
+					<div id="tools" class="container-fluid p-3 pt-5 p-md-5">
+						<div  class="row">
+							<div class="col-md-2 d-none d-md-block p-0">
+							</div>
+							<div  id="toolbox" class="col-md-10 py-3">
+								<h3 class="mt-1 text-warning">TOOLS</h3>
+								<div id="core-tools" class="d-flex flex-column justify-content-center align-items-center">
+								    <div id="html" class="d-flex justify-content-center">
+								        <img width="150" src="images/logo-html5.png"/>
+								    </div>
+								    <div id="css-js" class="d-flex justify-content-center">
+								        <img width="150" src="images/logo-css3.png"/>
+								        <img width="150" src="images/logo-javascript.png"/>
+								    </div>
+								</div>
+								<div id="other-tools" class="d-flex flex-row flex-md-column justify-content-center">
+								     <div id="tools-1" class="d-flex flex-column flex-md-row justify-content-center">
+								         <img width="150" src="images/logo-mongodb.png"/>
+								         <img width="150" src="images/logo-nodejs.png"/>
+								         <img width="150" src="images/logo-expressjs.png"/>
+								         <img width="150" src="images/logo-react.png"/>
+								         <img width="150" src="images/logo-heroku.png"/>
+								     </div>
+								     <div id="tools-2" class="d-flex flex-column flex-md-row justify-content-md-center">
+								         <img width="150" src="images/logo-git.png"/>
+								         <img width="150" src="images/logo-sublime-text-3.png"/>
+								         <img width="150" src="images/logo-postman.png"/>
+								         <img width="150" src="images/logo-gitlab-ci-cd.png"/>
+								     </div>
+								 </div>
+							</div>
+						</div>
+					</div>
+
+					<div id="contact" class="container-fluid p-3 pt-5 p-md-5">
+						<div class="row">
+							<div class="col-md-2 d-none d-md-block p-0">
+							</div>
+							<div id="contactbox" class="col-md-10 py-3">
+								<h3 class="mt-1 text-warning">CONTACT ME</h5>
+								<h5 class="text-white mt-5">through my social channels</h4>
+								<div class="d-flex flex-row flex-md-column justify-content-center ">
+								     <div id="tools-2" class="d-flex flex-column flex-md-row justify-content-md-center align-items-center">
+								         <a href="https://facebook.com/"><img width="75" height="75" src="images/fb.png"/></a>
+								         <a href="https://www.viber.com/"><img width="125" height="125" src="images/viber.webp"/></a>
+								         <a href="https://mail.google.com/"><img width="85" height="85" src="images/gmail.png"/></a>
+								         <a href="https://www.whatsapp.com/"><img class="ml-3" width="85" height="85" src="images/whatsapp.webp"/></a>
+								     </div>
+								</div>
+								<h5 class="text-white mt-5">or message me directly:</h4>
+								<div class="container-fluid">
+								 	<div class="row d-flex justify-content-center">
+								 		<div class="col-md-8">
+								 			<form class="p-5">
+								 				<div class="form-group">
+								 					<input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name">
+								 				</div>
+								 				<div class="form-group">
+								 					<input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email Address">
+								 				</div>
+								 				<div class="form-group">
+								 					<input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Contact Number">
+								 				</div>
+								 				<div>
+								 					<textarea class="form-control" id="exampleFormControlTextarea1" rows="5" placeholder="Write your message here"></textarea>
+								 				</div>
+								 				<button type="button" class="btn btn-style mt-3" data-toggle="modal" data-target="#modalDiv" >
+								 					Send
+								 				</button>
+								 				<div class="modal text-primary" id="modalDiv" tabindex="-1" >
+								 					<div class="modal-dialog">
+								 						<div class="modal-content">
+								 							<div class="modal-header">
+								 								<h5 class="modal-title">Message received, thanks!!</h5>
+								 								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								 									<span aria-hidden="true">&times;</span>
+								 								</button>
+								 							</div>
+								 							<div class="modal-body">
+								 								<p>I will contact you soon!</p>
+								 							</div>
+								 							<div class="modal-footer">
+								 								<button type="button" class="btn btn-style" data-dismiss="modal">Close</button>
+								 							</div>
+								 						</div>
+								 					</div>
+								 				</div>
+								 			</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>					
 				</div>
 						
 			</section>
+			<!-- Footer -->
 
-			<!-- Start of Landing Section -->
-			<!-- End of Landing Section -->
+			<footer class="bg-light text-grey d-flex justify-content-center d-grid gap-3 py-2 mt-5">
+			    <div>&copy;  2023 RFC Aquino.</div>
+			    <div class="mx-2">|</div>
+			    <div>All rights reserved.</div>
+			</footer>
+		
+
+			<!-- Modal Articles - hidden by default-->
+
+			<article>
+				<div class="modal text-primary" id="modalfrontend" tabindex="-1" >
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title">Front-end Web Development</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<p class="text-left">My Front-end Development projects implement user-interface (UI) designs that combine aesthetics with intuitive element placements which enables my clients' websites to be both functional and fun to use.</p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-style" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+
+			<article>
+				<div class="modal text-primary" id="modalbackend" tabindex="-1" >
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title">Back-end Web Development</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<p class="text-left">I developed several web applications that utilized backend databases like MySQL and MongoDB for high-capacity yet efficient data storage and access. Through my services, my clients gained the ability to efficiently capture important customer information from every webpage visit, and to query information for analysis - thus giving them a crucial competitive edge.</p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-style" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+
+			<article>
+				<div class="modal text-primary" id="modalfullstack" tabindex="-1" >
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title">Full-stack Web Development</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<p class="text-left">I mainly use MERN technology stack to build an end-to-end web application for my clients. The resulting web application is one that is seamless between its frontend and backend components thus ensuring that my clients' businesses are empowered all the while ensuring a delightful user experience.</p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-style" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
+
+			<article>
+				<div class="modal text-primary" id="modalproject" tabindex="-1" >
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title">Software Project Management</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<p class="text-left">A quality web application delivery goes beyond coding and deployment. Factors like schedule, budget and quality - among others, are just as critical to the successful delivery of the web application. In all the projects I manage, I make sure that the application does not only deliver the functionalities required by the users, but also gets completed within target schedule and budget.</p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-style" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
 
 
-			<!-- Start of Landing Section -->
-			<!-- End of Landing Section -->
+			<article>
+				<div class="modal text-primary" id="modalHTML" tabindex="-1" >
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title">HTML</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<p class="text-left">HTML stands for HyperText Markup Language. It is a standard markup language for web page creation. It allows the creation and structure of sections, paragraphs, and links using HTML elements (the building blocks of a web page) such as tags and attributes.</p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-style" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
 
-			<!-- Start of Landing Section -->
-			<!-- End of Landing Section -->
+			<article>
+				<div class="modal text-primary" id="modalBootstrap" tabindex="-1" >
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title">Bootstrap</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<p class="text-left">Bootstrap is a free and open-source web development framework. It’s designed to ease the web development process of responsive, mobile-first websites by providing a collection of syntax for template designs.</p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-style" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
 
 
+			</article>
 
+			<article>
+				<div class="modal text-primary" id="modalNode" tabindex="-1" >
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title">Node JS</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<p class="text-left">Node.js is a cross-platform, open-source server environment that can run on Windows, Linux, Unix, macOS, and more. Node.js is a back-end JavaScript runtime environment, runs on the V8 JavaScript engine, and executes JavaScript code outside a web browser.</p>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-style" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</article>
 
-			<!-- End of Main Container -->
+			<!-- End of Modal Articles -->
+			
 
 
 
@@ -221,10 +494,6 @@
 			<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 			<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 		</main>
-<!-- <img src="https://www.digitec.ch/im/Files/1/9/9/9/3/3/1/3/the_matrix_teaser_2_format21.jpeg?impolicy=ProductTileImage&resizeWidth=1136&resizeHeight=568&cropWidth=1136&cropHeight=568">
- -->
-
+		<!-- End of Main Container -->
 	</body>
-	</html>
-
-
+</html>
